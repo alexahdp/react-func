@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 import './index.css';
 
-import Main from './components/Main';
 import State from './components/State';
 import Context from './components/Context';
 import Reducer from './components/Reducer';
@@ -21,7 +20,7 @@ const App = () => {
         <li className="menu-item"><Link to="/waterfall">Waterfall</Link></li>
       </ul>
 
-      <Route exact path="/" component={Main} />
+      <Route exact path="/" component={() => <Redirect to="/useState" />} />
       <Route path="/useState" component={State} />
       <Route path="/useContext" component={Context} />
       <Route path="/useReducer" component={Reducer} />
