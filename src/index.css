@@ -6,14 +6,23 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #20232a;
+  background-color: #282c34;
   color: #ccc;
   text-align: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.main-menu {
+  background-color: #fff;
+  margin: 0;
+  padding: 20px;
+}
+
+.content {
+  padding-top: 100px;
+}
+
+.content ul {
+  list-style: none;
 }
 
 .menu-item {

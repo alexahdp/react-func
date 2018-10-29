@@ -12,7 +12,7 @@ import Waterfall from './components/Waterfall';
 const App = () => {
   return <Router>
     <div>
-      <ul>
+      <ul className="main-menu">
         <li className="menu-item"><Link to="/">Main</Link></li>
         <li className="menu-item"><Link to="/useState">useState</Link></li>
         <li className="menu-item"><Link to="/useContext">useContext</Link></li>
@@ -20,11 +20,13 @@ const App = () => {
         <li className="menu-item"><Link to="/waterfall">Waterfall</Link></li>
       </ul>
 
-      <Route exact path="/" component={() => <Redirect to="/useState" />} />
-      <Route path="/useState" component={State} />
-      <Route path="/useContext" component={Context} />
-      <Route path="/useReducer" component={Reducer} />
-      <Route path="/waterfall" component={Waterfall} />
+      <div className="content">
+        <Route exact path="/" component={() => <Redirect to="/useState" />} />
+        <Route path="/useState" component={State} />
+        <Route path="/useContext" component={Context} />
+        <Route path="/useReducer" component={Reducer} />
+        <Route path="/waterfall" component={Waterfall} />
+      </div>
     </div>
   </Router>
 };
