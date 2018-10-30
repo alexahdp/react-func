@@ -8,6 +8,7 @@ import State from './components/State';
 import Context from './components/Context';
 import Reducer from './components/Reducer';
 import Waterfall from './components/Waterfall';
+import ContextProvider from './components/ContextProvider';
 
 const App = () => {
   return <Router>
@@ -18,6 +19,7 @@ const App = () => {
         <li className="menu-item"><Link to="/useContext">useContext</Link></li>
         <li className="menu-item"><Link to="/useReducer">useReducer</Link></li>
         <li className="menu-item"><Link to="/waterfall">Waterfall</Link></li>
+        <li className="menu-item"><Link to="/context-provider">ContextProvider</Link></li>
       </ul>
 
       <div className="content">
@@ -26,6 +28,8 @@ const App = () => {
         <Route path="/useContext" component={Context} />
         <Route path="/useReducer" component={Reducer} />
         <Route path="/waterfall" component={Waterfall} />
+        <Route path="/context-provider" component={ContextProvider} />
+
       </div>
     </div>
   </Router>
