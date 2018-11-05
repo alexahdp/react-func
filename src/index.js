@@ -9,6 +9,7 @@ import Context from './components/Context';
 import Reducer from './components/Reducer';
 import Waterfall from './components/Waterfall';
 import ContextProvider from './components/ContextProvider';
+import LazyLoad from './components/LazyLoad';
 
 const App = () => {
   return <Router>
@@ -20,6 +21,7 @@ const App = () => {
         <li className="menu-item"><Link to="/useReducer">useReducer</Link></li>
         <li className="menu-item"><Link to="/waterfall">Waterfall</Link></li>
         <li className="menu-item"><Link to="/context-provider">ContextProvider</Link></li>
+        <li className="menu-item"><Link to="/lazy-load">LazyLoad</Link></li>
       </ul>
 
       <div className="content">
@@ -29,6 +31,7 @@ const App = () => {
         <Route path="/useReducer" component={Reducer} />
         <Route path="/waterfall" component={Waterfall} />
         <Route path="/context-provider" component={ContextProvider} />
+        <Route path="/lazy-load" component={LazyLoad} />
 
       </div>
     </div>
